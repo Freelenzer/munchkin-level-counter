@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const Card = ({ children, className }) => (
-  <div className={`bg-white p-4 shadow-lg rounded-2xl ${className}`}>{children}</div>
+  <div className={`bg-transparent p-4 shadow-lg rounded-2xl ${className}`}>{children}</div>
 );
 
 const Button = ({ children, onClick, variant, size }) => {
@@ -24,22 +24,26 @@ const Button = ({ children, onClick, variant, size }) => {
 
 const PlayerCard = ({ playerName }) => {
   const [characterLevel, setCharacterLevel] = useState(1);
-  const [gearLevel, setGearLevel] = useState(1);
+  const [gearLevel, setGearLevel] = useState(0);
 
   const incrementLevel = (level, setter) => setter(level + 1);
   const decrementLevel = (level, setter) => {
     if (level > 1) setter(level - 1);
   };
 
+  const decrementGear = (level, setter) => {
+    if (level > 0) setter(level - 1);
+  };
+
   const combatLevel = characterLevel + gearLevel;
 
   return (
-    <Card className="max-w-sm mx-auto">
+    <Card className="max-w-sm mx-auto border-2 border-solid bg-transparent">
       <h2 className="text-xl font-bold text-center">{playerName}</h2>
-      <div className="space-y-4 mt-4">
+      <div className="space-y-8 mt-4">
         <div className="flex items-center justify-between">
           <span className="text-lg font-medium">Character Level</span>
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-8">
             <Button
               size="sm"
               variant="outline"
@@ -47,7 +51,7 @@ const PlayerCard = ({ playerName }) => {
             >
               &#x25BC;
             </Button>
-            <span className="text-lg font-bold">{characterLevel}</span>
+            <span className="w-8 text-lg font-bold">{characterLevel}</span>
             <Button
               size="sm"
               variant="outline"
@@ -59,15 +63,15 @@ const PlayerCard = ({ playerName }) => {
         </div>
         <div className="flex items-center justify-between">
           <span className="text-lg font-medium">Gear Level</span>
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-8">
             <Button
               size="sm"
               variant="outline"
-              onClick={() => decrementLevel(gearLevel, setGearLevel)}
+              onClick={() => decrementGear(gearLevel, setGearLevel)}
             >
               &#x25BC;
             </Button>
-            <span className="text-lg font-bold">{gearLevel}</span>
+            <span className="w-8 text-lg font-bold">{gearLevel}</span>
             <Button
               size="sm"
               variant="outline"

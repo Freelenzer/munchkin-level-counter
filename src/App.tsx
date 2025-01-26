@@ -26,9 +26,9 @@ function App() {
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
       </div>
-      <div className="card">
+     
       <PlayerCard playerName={"Tobi"}></PlayerCard>
-      </div>
+   
     </>
   )
 }
