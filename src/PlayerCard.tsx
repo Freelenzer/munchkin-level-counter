@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const Card = ({ children, className }) => (
-  <div className={`bg-transparent p-4 shadow-lg rounded-2xl ${className}`}>{children}</div>
+  <div className={`card border-2 border-solid bg-zinc-900 p-4 shadow-lg rounded-2xl ${className}`}>{children}</div>
 );
 
 const Button = ({ children, onClick, variant, size }) => {
@@ -38,7 +38,7 @@ const PlayerCard = ({ playerName }) => {
   const combatLevel = characterLevel + gearLevel;
 
   return (
-    <Card className="max-w-sm mx-auto border-2 border-solid bg-transparent">
+    <Card className="max-w-sm mx-auto">
       <h2 className="text-xl font-bold text-center">{playerName}</h2>
       <div className="space-y-8 mt-4">
         <div className="flex items-center justify-between">
@@ -51,7 +51,7 @@ const PlayerCard = ({ playerName }) => {
             >
               &#x25BC;
             </Button>
-            <span className="w-8 text-lg font-bold">{characterLevel}</span>
+            <span className="w-4 text-lg font-bold">{characterLevel}</span>
             <Button
               size="sm"
               variant="outline"
@@ -71,7 +71,7 @@ const PlayerCard = ({ playerName }) => {
             >
               &#x25BC;
             </Button>
-            <span className="w-8 text-lg font-bold">{gearLevel}</span>
+            <span className="w-4 text-lg font-bold">{gearLevel}</span>
             <Button
               size="sm"
               variant="outline"
@@ -83,7 +83,7 @@ const PlayerCard = ({ playerName }) => {
         </div>
         <div className="flex items-center justify-between">
           <span className="text-lg font-medium">Combat Level</span>
-          <span className="text-lg font-bold">{combatLevel}</span>
+          <span className="text-4xl font-bold">{combatLevel}</span>
         </div>
       </div>
     </Card>
