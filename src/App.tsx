@@ -18,7 +18,7 @@ export default function App() {
 
   return (
     <div>
-      <button
+      <button 
         onClick={() => setIsModalOpen(true)}
         style={{
           border: 'none',
@@ -50,7 +50,7 @@ export default function App() {
             width: '300px'
           }}>
             <h2 style={{ marginTop: 0 }}>Add New Player</h2>
-            <input
+            <input 
               type="text"
               value={newPlayerName}
               onChange={(e) => setNewPlayerName(e.target.value)}
@@ -64,7 +64,7 @@ export default function App() {
               }}
             />
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-              <button
+              <button 
                 onClick={() => setIsModalOpen(false)}
                 style={{
                   backgroundColor: '#f44336',
@@ -77,7 +77,7 @@ export default function App() {
               >
                 Cancel
               </button>
-              <button
+              <button 
                 onClick={addPlayer}
                 style={{
                   backgroundColor: '#4CAF50',
@@ -95,14 +95,14 @@ export default function App() {
         </div>
       )}
 
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(3, 1fr)',
-        gap: '10px',
-        marginTop: '20px'
+      <div style={{ 
+        display: 'grid', 
+        gridTemplateColumns: 'repeat(3, 1fr)', 
+        gap: '10px', 
+        marginTop: '20px' 
       }}>
         {players.map((player, index) => (
-          <PlayerCard playerName={player}></PlayerCard>
+          <PlayerCard playerName={player}></PlayerCard> 
         ))}
       </div>
     </div>
