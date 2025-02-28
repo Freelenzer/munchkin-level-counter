@@ -25,6 +25,7 @@ body {
 
 .card:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
+  overflow:visible;
 }
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
