@@ -1,5 +1,5 @@
 name: Deploy
-
+# Taken from https://github.com/sitek94/vite-deploy-demo?tab=readme-ov-file
 on:
   push:
     branches:
