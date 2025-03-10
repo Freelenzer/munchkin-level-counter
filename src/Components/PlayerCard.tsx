@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 
 const Card = ({ children, className }) => (
-  <div className={`card border-2 border-solid bg-zinc-900 p-4 shadow-lg rounded-2xl ${className}`}>{children}</div>
+  <div
+    className={`card border-2 border-solid bg-zinc-900 p-4 shadow-lg rounded-2xl ${className}`}
+  >
+    {children}
+  </div>
 );
 
 const Button = ({ children, onClick, variant, size }) => {
@@ -86,6 +90,9 @@ const PlayerCard = ({ playerName }) => {
           <span className="text-4xl font-bold">{combatLevel}</span>
         </div>
       </div>
+      <Button size="sm" variant="outline" onClick={() => console.log("delete")}>
+        Delete
+      </Button>
     </Card>
   );
 };
