@@ -6,7 +6,14 @@ Live Demo [Website](https://freelenzer.github.io/munchkin-level-counter/)
 
 This app lets you track the current fighting power for you and your friends.
 
-# ⚒️ Builing
+# ⚒️ Building
+
+## Setup
+
+Install Vite:
+```
+npm i vite
+```
 
 Release
 
