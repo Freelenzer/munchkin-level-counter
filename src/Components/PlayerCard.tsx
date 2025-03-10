@@ -44,7 +44,7 @@ const PlayerCard = ({ playerName }) => {
   return (
     <Card className="max-w-sm mx-auto">
       <h2 className="text-xl font-bold text-center">{playerName}</h2>
-      <div className="space-y-8 mt-4">
+      <div className="space-y-8 mt-4 ">
         <div className="flex items-center justify-between">
           <span className="text-lg font-medium">Character Level</span>
           <div className="flex items-center space-x-8">
@@ -89,17 +89,19 @@ const PlayerCard = ({ playerName }) => {
           <span className="text-lg font-medium">Combat Level</span>
           <span className="text-4xl font-bold">{combatLevel}</span>
         </div>
-        <Button
-          size="sm"
-          variant="outline"
-          onClick={() => console.log("delete")}
-        >
-          Delete
-          <i
-            className="fa fa-trash"
-            style={{ padding: "5px", color: "red" }}
-          ></i>
-        </Button>
+        <div className="flex items-center justify-center">
+          <Button
+            size="sm"
+            variant="outline"
+            onClick={() => console.log("delete")}
+          >
+            Delete
+            <i
+              className="fa fa-trash"
+              style={{ padding: "5px", color: "red" }}
+            ></i>
+          </Button>
+        </div>
       </div>
     </Card>
   );
