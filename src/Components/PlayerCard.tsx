@@ -89,10 +89,18 @@ const PlayerCard = ({ playerName }) => {
           <span className="text-lg font-medium">Combat Level</span>
           <span className="text-4xl font-bold">{combatLevel}</span>
         </div>
+        <Button
+          size="sm"
+          variant="outline"
+          onClick={() => console.log("delete")}
+        >
+          Delete
+          <i
+            className="fa fa-trash"
+            style={{ padding: "5px", color: "red" }}
+          ></i>
+        </Button>
       </div>
-      <Button size="sm" variant="outline" onClick={() => console.log("delete")}>
-        Delete
-      </Button>
     </Card>
   );
 };
