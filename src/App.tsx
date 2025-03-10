@@ -13,7 +13,11 @@ export default function App() {
       setPlayers([...players, newPlayerName.trim()]);
       setNewPlayerName("");
       setIsModalOpen(false);
+      console.log(players);
     }
+  };
+  const deletePlayer = (index: number) => {
+    setPlayers(players.filter((_, i) => i !== index));
   };
 
   return (
@@ -110,7 +114,7 @@ export default function App() {
         {players.map((player, index) => (
           <PlayerCard
             key={index}
-            onClick={() => console.log("delete")}
+            onClick={() => deletePlayer(index)}
             playerName={player}
           ></PlayerCard>
         ))}

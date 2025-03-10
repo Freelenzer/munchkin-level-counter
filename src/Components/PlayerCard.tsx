@@ -26,11 +26,12 @@ const Button = ({ children, onClick, variant, size }) => {
   );
 };
 
-interface Prop {
+interface Props {
+  playerName: string;
   onClick: () => void; // Define the Prop for the button onClick event
 }
 
-const PlayerCard = ({ playerName, onClick }) => {
+const PlayerCard = ({ playerName, onClick }: Props) => {
   const [characterLevel, setCharacterLevel] = useState(1);
   const [gearLevel, setGearLevel] = useState(0);
 
