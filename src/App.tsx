@@ -13,7 +13,6 @@ export default function App() {
       setPlayers([...players, newPlayerName.trim()]);
       setNewPlayerName("");
       setIsModalOpen(false);
-      console.log(players);
     }
   };
   const deletePlayer = (index: number) => {
