@@ -109,6 +109,7 @@ export default function App() {
       >
         {players.map((player, index) => (
           <PlayerCard
+            key={index}
             onClick={() => console.log("delete")}
             playerName={player}
           ></PlayerCard>
