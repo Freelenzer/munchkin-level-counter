@@ -6,14 +6,14 @@
 }
 
 @font-face {
-  font-family: 'Munchkin';
-  src: url('assets/munchkin.ttf') format('truetype');
+  font-family: "Munchkin";
+  src: url("munchkin.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 body {
-  font-family: 'Munchkin', sans-serif;
+  font-family: "Munchkin", sans-serif;
 }
 
 .logo {
@@ -25,7 +25,7 @@ body {
 
 .card:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
-  overflow:visible;
+  overflow: visible;
 }
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
