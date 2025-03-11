@@ -60,6 +60,7 @@ export default function App() {
           >
             <h2 style={{ marginTop: 0 }}>Add New Player</h2>
             <input
+              autoFocus
               type="text"
               value={newPlayerName}
               onChange={(e) => setNewPlayerName(e.target.value)}
