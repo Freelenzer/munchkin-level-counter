@@ -60,7 +60,7 @@ const PlayerCard = ({ playerName, onClick }: Props) => {
       <h2 className="text-xl font-bold text-center">{playerName}</h2>
       <div className="space-y-8 mt-4 ">
         <div className="flex items-center justify-between">
-          <span className="text-lg font-medium">Character Level</span>
+          <span className="text-lg text-left font-medium">Character Level</span>
           <div className="flex items-center space-x-4">
             <Button
               size="sm"
@@ -80,7 +80,7 @@ const PlayerCard = ({ playerName, onClick }: Props) => {
           </div>
         </div>
         <div className="flex items-center justify-between">
-          <span className="text-lg font-medium">Gear Level</span>
+          <span className="text-lg font-medium text-left">Gear Level</span>
           <div className="flex items-center space-x-4">
             <Button
               size="sm"
@@ -89,7 +89,7 @@ const PlayerCard = ({ playerName, onClick }: Props) => {
             >
               &#x25BC;
             </Button>
-            <span className="w-4 text-lg font-bold">{gearLevel}</span>
+            <span className="w-4 text-lg font-bold text-left">{gearLevel}</span>
             <Button
               size="sm"
               variant="outline"
