@@ -7,7 +7,7 @@
 
 @font-face {
   font-family: "Munchkin";
-  src: url("./munchkin.ttf") format("truetype");
+  src: url("./assets/munchkin.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
