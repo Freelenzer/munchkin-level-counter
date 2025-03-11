@@ -19,7 +19,7 @@ const Button = ({ children, onClick, variant, size }) => {
   return (
     <button
       onClick={onClick}
-      className={`${baseStyles} ${sizeStyles} ${variantStyles}`}
+      className={`cursor-pointer ${baseStyles} ${sizeStyles} ${variantStyles}`}
     >
       {children}
     </button>
