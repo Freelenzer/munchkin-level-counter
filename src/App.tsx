@@ -7,7 +7,7 @@ export default function App() {
   const [players, setPlayers] = useState([]);
   const [newPlayerName, setNewPlayerName] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const deleteSound = new Audio("src/assets/paper-bin.mp3");
+  const deleteSound = new Audio("paper-bin.mp3");
 
   const addPlayer = () => {
     if (newPlayerName.trim()) {
