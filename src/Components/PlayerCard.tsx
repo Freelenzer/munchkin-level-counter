@@ -35,12 +35,21 @@ const PlayerCard = ({ playerName, onClick }: Props) => {
   const [characterLevel, setCharacterLevel] = useState(1);
   const [gearLevel, setGearLevel] = useState(0);
 
-  const incrementLevel = (level, setter) => setter(level + 1);
-  const decrementLevel = (level, setter) => {
+  const incrementLevel = (
+    level: number,
+    setter: React.Dispatch<React.SetStateAction<number>>
+  ) => setter(level + 1);
+  const decrementLevel = (
+    level: number,
+    setter: React.Dispatch<React.SetStateAction<number>>
+  ) => {
     if (level > 1) setter(level - 1);
   };
 
-  const decrementGear = (level, setter) => {
+  const decrementGear = (
+    level: number,
+    setter: React.Dispatch<React.SetStateAction<number>>
+  ) => {
     if (level > 0) setter(level - 1);
   };
 
