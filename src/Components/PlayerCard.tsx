@@ -52,7 +52,7 @@ const PlayerCard = ({ playerName, onClick }: Props) => {
       <div className="space-y-8 mt-4 ">
         <div className="flex items-center justify-between">
           <span className="text-lg font-medium">Character Level</span>
-          <div className="flex items-center space-x-8">
+          <div className="flex items-center space-x-4">
             <Button
               size="sm"
               variant="outline"
@@ -72,7 +72,7 @@ const PlayerCard = ({ playerName, onClick }: Props) => {
         </div>
         <div className="flex items-center justify-between">
           <span className="text-lg font-medium">Gear Level</span>
-          <div className="flex items-center space-x-8">
+          <div className="flex items-center space-x-4">
             <Button
               size="sm"
               variant="outline"
