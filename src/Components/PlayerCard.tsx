@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 
 const Card = ({ children, className }) => (
-  <div className={`card border-2 border-solid bg-zinc-900 p-4 shadow-lg rounded-2xl ${className}`}>{children}</div>
+  <div
+    className={`card border-2 border-solid bg-zinc-900 p-4 shadow-lg rounded-2xl ${className}`}
+  >
+    {children}
+  </div>
 );
 
 const Button = ({ children, onClick, variant, size }) => {
@@ -22,7 +26,12 @@ const Button = ({ children, onClick, variant, size }) => {
   );
 };
 
-const PlayerCard = ({ playerName }) => {
+interface Props {
+  playerName: string;
+  onClick: () => void; // Define the Prop for the button onClick event
+}
+
+const PlayerCard = ({ playerName, onClick }: Props) => {
   const [characterLevel, setCharacterLevel] = useState(1);
   const [gearLevel, setGearLevel] = useState(0);
 
@@ -38,9 +47,9 @@ const PlayerCard = ({ playerName }) => {
   const combatLevel = characterLevel + gearLevel;
 
   return (
-    <Card className="max-w-sm mx-auto">
+    <Card className="max-w-sm mx-auto relative group">
       <h2 className="text-xl font-bold text-center">{playerName}</h2>
-      <div className="space-y-8 mt-4">
+      <div className="space-y-8 mt-4 ">
         <div className="flex items-center justify-between">
           <span className="text-lg font-medium">Character Level</span>
           <div className="flex items-center space-x-8">
@@ -84,6 +93,18 @@ const PlayerCard = ({ playerName }) => {
         <div className="flex items-center justify-between">
           <span className="text-lg font-medium">Combat Level</span>
           <span className="text-4xl font-bold">{combatLevel}</span>
+        </div>
+        <div className=" flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <button
+            className="px-2 py-1 text-sm cursor-pointer border border-gray-300 text-gray-700 bg-white hover:bg-gray-100 flex items-center justify-center rounded-lg"
+            onClick={onClick}
+          >
+            Delete
+            <i
+              className="fa fa-trash"
+              style={{ padding: "5px", color: "red" }}
+            ></i>
+          </button>
         </div>
       </div>
     </Card>
