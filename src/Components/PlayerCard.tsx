@@ -60,7 +60,9 @@ const PlayerCard = ({ playerName, onClick }: Props) => {
       <h2 className="text-xl font-bold text-center">{playerName}</h2>
       <div className="space-y-8 mt-4 ">
         <div className="flex items-center justify-between">
-          <span className="text-lg text-left font-medium">Character Level</span>
+          <span className="text-lg text-left font-medium mr-6">
+            Character Level
+          </span>
           <div className="flex items-center space-x-4">
             <Button
               size="sm"
