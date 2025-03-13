@@ -19,7 +19,7 @@ const Button = ({ children, onClick, variant, size }) => {
   return (
     <button
       onClick={onClick}
-      className={`${baseStyles} ${sizeStyles} ${variantStyles}`}
+      className={`cursor-pointer ${baseStyles} ${sizeStyles} ${variantStyles}`}
     >
       {children}
     </button>
@@ -35,12 +35,21 @@ const PlayerCard = ({ playerName, onClick }: Props) => {
   const [characterLevel, setCharacterLevel] = useState(1);
   const [gearLevel, setGearLevel] = useState(0);
 
-  const incrementLevel = (level, setter) => setter(level + 1);
-  const decrementLevel = (level, setter) => {
+  const incrementLevel = (
+    level: number,
+    setter: React.Dispatch<React.SetStateAction<number>>
+  ) => setter(level + 1);
+  const decrementLevel = (
+    level: number,
+    setter: React.Dispatch<React.SetStateAction<number>>
+  ) => {
     if (level > 1) setter(level - 1);
   };
 
-  const decrementGear = (level, setter) => {
+  const decrementGear = (
+    level: number,
+    setter: React.Dispatch<React.SetStateAction<number>>
+  ) => {
     if (level > 0) setter(level - 1);
   };
 
@@ -48,11 +57,13 @@ const PlayerCard = ({ playerName, onClick }: Props) => {
 
   return (
     <Card className="max-w-sm mx-auto relative group">
-      <h2 className="text-xl font-bold text-center">{playerName}</h2>
+      <h1 className="text-xl font-bold text-center">{playerName}</h1>
       <div className="space-y-8 mt-4 ">
         <div className="flex items-center justify-between">
-          <span className="text-lg font-medium">Character Level</span>
-          <div className="flex items-center space-x-8">
+          <span className="text-lg text-left font-medium mr-6">
+            Character Level
+          </span>
+          <div className="flex items-center space-x-4">
             <Button
               size="sm"
               variant="outline"
@@ -71,8 +82,8 @@ const PlayerCard = ({ playerName, onClick }: Props) => {
           </div>
         </div>
         <div className="flex items-center justify-between">
-          <span className="text-lg font-medium">Gear Level</span>
-          <div className="flex items-center space-x-8">
+          <span className="text-lg font-medium text-left">Gear Level</span>
+          <div className="flex items-center space-x-4">
             <Button
               size="sm"
               variant="outline"
@@ -80,7 +91,7 @@ const PlayerCard = ({ playerName, onClick }: Props) => {
             >
               &#x25BC;
             </Button>
-            <span className="w-4 text-lg font-bold">{gearLevel}</span>
+            <span className="w-4 text-lg font-bold text-left">{gearLevel}</span>
             <Button
               size="sm"
               variant="outline"

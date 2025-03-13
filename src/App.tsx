@@ -26,7 +26,7 @@ export default function App() {
       <button
         onClick={() => setIsModalOpen(true)}
         style={{
-          border: "none",
+          border: "1px solid",
           padding: "10px 20px",
           borderRadius: "5px",
           cursor: "pointer",
