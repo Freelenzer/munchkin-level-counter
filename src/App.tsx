@@ -30,7 +30,6 @@ export default function App() {
           padding: "10px 20px",
           borderRadius: "5px",
           cursor: "pointer",
-          color: "black",
         }}
       >
         Add Player
