@@ -57,7 +57,7 @@ const PlayerCard = ({ playerName, onClick }: Props) => {
 
   return (
     <Card className="max-w-sm mx-auto relative group">
-      <h2 className="text-xl font-bold text-center">{playerName}</h2>
+      <h1 className="text-xl font-bold text-center">{playerName}</h1>
       <div className="space-y-8 mt-4 ">
         <div className="flex items-center justify-between">
           <span className="text-lg text-left font-medium mr-6">
