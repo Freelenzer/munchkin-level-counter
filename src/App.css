@@ -47,3 +47,11 @@ body {
 .read-the-docs {
   color: #888;
 }
+
+@media (prefers-color-scheme: light) {
+  .lightmode {
+    color: black;
+    /* color: #213547; */
+    background-color: #ffffff;
+  }
+}
