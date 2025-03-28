@@ -19,7 +19,14 @@ const BackgroundMusic = () => {
         format={["mp3", "ogg"]}
       />
       <button onClick={() => setPlaying(!playing)}>
-        {playing ? "Pause" : "Play"}
+        <i
+          className={
+            playing
+              ? "fa fa-volume-up cursor-pointer scale-150"
+              : "fa fa-volume-off cursor-pointer scale-150"
+          }
+          aria-hidden="true"
+        ></i>
       </button>
     </div>
   );

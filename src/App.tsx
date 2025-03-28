@@ -122,7 +122,9 @@ export default function App() {
           ></PlayerCard>
         ))}
       </div>
-      <BackgroundMusic />
+      <div className="absolute right-20 top-20">
+        <BackgroundMusic />
+      </div>
     </div>
   );
 }
