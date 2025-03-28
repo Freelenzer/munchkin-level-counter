@@ -1,5 +1,6 @@
 import PlayerCard from "./Components/PlayerCard";
 import "./App.css";
+import BackgroundMusic from "./Components/BackgroundMusic.tsx";
 
 import React, { useState } from "react";
 
@@ -121,6 +122,7 @@ export default function App() {
           ></PlayerCard>
         ))}
       </div>
+      <BackgroundMusic />
     </div>
   );
 }
