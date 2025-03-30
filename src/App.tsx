@@ -1,5 +1,6 @@
 import PlayerCard from "./Components/PlayerCard";
 import "./App.css";
+import BackgroundMusic from "./Components/BackgroundMusic.tsx";
 
 import React, { useState } from "react";
 
@@ -120,6 +121,9 @@ export default function App() {
             playerName={player}
           ></PlayerCard>
         ))}
+      </div>
+      <div className="absolute right-20 top-20">
+        <BackgroundMusic />
       </div>
     </div>
   );
