@@ -56,7 +56,7 @@ const PlayerCard = ({ playerName, onClick }: Props) => {
   const combatLevel = characterLevel + gearLevel;
 
   return (
-    <Card className="max-w-sm mx-auto relative group">
+    <Card className="lightmode max-w-sm mx-auto relative group">
       <h1 className="text-xl font-bold text-center">{playerName}</h1>
       <div className="space-y-8 mt-4 ">
         <div className="flex items-center justify-between">
