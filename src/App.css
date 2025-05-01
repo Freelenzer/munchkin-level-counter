@@ -24,7 +24,7 @@ body {
 }
 
 .card:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #acaed1aa);
   overflow: visible;
 }
 .logo:hover {
@@ -41,7 +41,9 @@ body {
 }
 
 .card {
-  padding: 2em;
+  padding: 1em;
+  background-color: #e7c08d;
+  color: black;
 }
 
 .read-the-docs {
@@ -50,8 +52,8 @@ body {
 
 @media (prefers-color-scheme: light) {
   .lightmode {
-    color: black;
+    /* color: black; */
     /* color: #213547; */
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
   }
 }

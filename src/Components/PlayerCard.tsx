@@ -19,6 +19,7 @@ const Button = ({ children, onClick, variant, size }) => {
   return (
     <button
       onClick={onClick}
+      style={{ backgroundColor: "#e7c08d" }}
       className={`cursor-pointer ${baseStyles} ${sizeStyles} ${variantStyles}`}
     >
       {children}
@@ -56,7 +57,7 @@ const PlayerCard = ({ playerName, onClick }: Props) => {
   const combatLevel = characterLevel + gearLevel;
 
   return (
-    <Card className="lightmode max-w-sm mx-auto relative group">
+    <Card className="lightmode max-w-sm  mx-auto border-6 relative group ">
       <h1 className="text-xl font-bold text-center">{playerName}</h1>
       <div className="space-y-8 mt-4 ">
         <div className="flex items-center justify-between">
@@ -113,7 +114,7 @@ const PlayerCard = ({ playerName, onClick }: Props) => {
             Delete
             <i
               className="fa fa-trash"
-              style={{ padding: "5px", color: "red" }}
+              style={{ padding: "5px", color: "black" }}
             ></i>
           </button>
         </div>

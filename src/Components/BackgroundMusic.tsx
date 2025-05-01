@@ -18,7 +18,10 @@ const BackgroundMusic = () => {
         html5={true}
         format={["mp3", "ogg"]}
       />
-      <button onClick={() => setPlaying(!playing)}>
+      <button
+        onClick={() => setPlaying(!playing)}
+        style={{ color: "black", backgroundColor: "none", border: "none" }}
+      >
         <i
           className={
             playing

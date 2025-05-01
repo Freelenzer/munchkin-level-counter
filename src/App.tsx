@@ -28,11 +28,15 @@ export default function App() {
         <button
           onClick={() => setIsModalOpen(true)}
           style={{
-            border: "1px solid",
+            border: "4px solid",
+            borderColor: "black",
+            backgroundColor: "#e7c08d",
             padding: "10px 20px",
             borderRadius: "5px",
+            color: "black",
             cursor: "pointer",
-            marginBottom: "1rem",
+            marginBottom: "1.5rem",
+            fontSize: "1.5rem",
           }}
         >
           Add Player
@@ -42,17 +46,7 @@ export default function App() {
         </div>
       </div>
 
-      <div
-        className="table"
-        style={{
-          backgroundImage: "url(" + "img/background_table.jpg" + ")",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-          height: "80vh",
-          width: "100vw",
-        }}
-      >
+      <div className="table">
         {isModalOpen && (
           <div
             style={{
@@ -126,7 +120,7 @@ export default function App() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
+            gridTemplateColumns: "repeat(4, 1fr)",
             gap: "10px",
             marginTop: "20px",
           }}
