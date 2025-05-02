@@ -16,22 +16,9 @@ body {
   font-family: "Munchkin", sans-serif;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-
 .card:hover {
   filter: drop-shadow(0 0 2em #acaed1aa);
   overflow: visible;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -48,12 +35,4 @@ body {
 
 .read-the-docs {
   color: #888;
-}
-
-@media (prefers-color-scheme: light) {
-  .lightmode {
-    /* color: black; */
-    /* color: #213547; */
-    /* background-color: #ffffff; */
-  }
 }

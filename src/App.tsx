@@ -34,8 +34,7 @@ export default function App() {
             padding: "10px 20px",
             borderRadius: "5px",
             color: "black",
-            cursor: "pointer",
-            marginBottom: "1.5rem",
+
             fontSize: "1.5rem",
           }}
         >
@@ -64,13 +63,18 @@ export default function App() {
           >
             <div
               style={{
-                backgroundColor: "gray",
+                backgroundColor: "#e7c08d",
+                border: "5px solid",
+                borderColor: "black",
+                color: "black",
                 padding: "20px",
                 borderRadius: "10px",
                 width: "300px",
               }}
             >
-              <h2 style={{ marginTop: 0 }}>Add New Player</h2>
+              <h2 style={{ marginTop: 0, fontSize: "1.5rem" }}>
+                Add New Player
+              </h2>
               <input
                 autoFocus
                 type="text"
@@ -79,6 +83,7 @@ export default function App() {
                 onKeyDown={(e) => e.key === "Enter" && addPlayer()}
                 placeholder="Enter player name"
                 style={{
+                  color: "black",
                   width: "100%",
                   padding: "10px",
                   marginBottom: "10px",
@@ -94,7 +99,6 @@ export default function App() {
                     border: "none",
                     padding: "10px 20px",
                     borderRadius: "5px",
-                    cursor: "pointer",
                   }}
                 >
                   Cancel
@@ -107,7 +111,6 @@ export default function App() {
                     border: "none",
                     padding: "10px 20px",
                     borderRadius: "5px",
-                    cursor: "pointer",
                   }}
                 >
                   Confirm
