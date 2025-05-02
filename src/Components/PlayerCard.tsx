@@ -35,16 +35,21 @@ interface Props {
 const PlayerCard = ({ playerName, onClick }: Props) => {
   const [characterLevel, setCharacterLevel] = useState(1);
   const [gearLevel, setGearLevel] = useState(0);
+  const [winGame, setWinGame] = useState(false);
 
   const incrementLevel = (
     level: number,
     setter: React.Dispatch<React.SetStateAction<number>>
-  ) => setter(level + 1);
+  ) => {
+    level < 10 && setter(level + 1);
+    level > 9 && setWinGame(true), console.log(winGame);
+  };
   const decrementLevel = (
     level: number,
     setter: React.Dispatch<React.SetStateAction<number>>
   ) => {
-    if (level > 1) setter(level - 1);
+    level > 1 && setter(level - 1);
+    level < 10 && setWinGame(false), console.log(false);
   };
 
   const decrementGear = (
