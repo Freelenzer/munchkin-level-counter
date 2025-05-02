@@ -40,7 +40,7 @@ export default function App() {
         >
           Add Player
         </button>
-        <div className="absolute right-20 top-15">
+        <div className="absolute right-1 top-5">
           <BackgroundMusic />
         </div>
       </div>

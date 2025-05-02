@@ -39,3 +39,9 @@ body {
 .read-the-docs {
   color: #888;
 }
+
+.musicbtn {
+  color: "black";
+  background-image: url("/img/sound_off.png");
+  border: "none";
+}
