@@ -31,11 +31,11 @@ button {
 }
 
 button:hover {
-  cursor: url(img/cursor-pointer.png), auto;
+  cursor: url(./assets/cursor-pointer.png), auto;
 }
 
 body {
-  background-image: url("img/Munchkin_table.png");
+  background-image: url("./assets/Munchkin_table.png");
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0;
@@ -43,7 +43,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  cursor: url(img/cursor.png), auto;
+  cursor: url(./assets/cursor.png), auto;
 }
 
 h1 {
