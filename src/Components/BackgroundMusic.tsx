@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import Howler from "react-howler";
-
+import soundOn from '../assets/sound_on.png';
+import soundOff from '../assets/sound_off.png';
 const BackgroundMusic = () => {
   const [playing, setPlaying] = useState(false);
   const streamUrl =
@@ -27,7 +28,7 @@ const BackgroundMusic = () => {
         }}
       >
         <img
-          src={playing ? "img/sound_on.png" : "img/sound_off.png"}
+          src={playing ? soundOn : soundOff}
           style={{ height: "100px" }}
         />
       </button>
