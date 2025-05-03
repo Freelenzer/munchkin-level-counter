@@ -41,7 +41,5 @@ body {
 }
 
 .musicbtn {
-  color: "black";
   background-image: url("/img/sound_off.png");
-  border: "none";
 }
