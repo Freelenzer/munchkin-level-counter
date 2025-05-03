@@ -84,6 +84,9 @@ export default function App() {
                 placeholder="Enter player name"
                 style={{
                   color: "black",
+                  borderColor: "black",
+                  border: "2px solid",
+                  borderRadius: "5px",
                   width: "100%",
                   padding: "10px",
                   marginBottom: "10px",
