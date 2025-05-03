@@ -18,15 +18,18 @@ const BackgroundMusic = () => {
         html5={true}
         format={["mp3", "ogg"]}
       />
-      <button onClick={() => setPlaying(!playing)}>
-        <i
-          className={
-            playing
-              ? "fa fa-volume-up cursor-pointer scale-150"
-              : "fa fa-volume-off cursor-pointer scale-150"
-          }
-          aria-hidden="true"
-        ></i>
+      <button
+        onClick={() => setPlaying(!playing)}
+        style={{
+          color: "black",
+          backgroundColor: "none",
+          border: "none",
+        }}
+      >
+        <img
+          src={playing ? "img/sound_on.png" : "img/sound_off.png"}
+          style={{ height: "100px" }}
+        />
       </button>
     </div>
   );

@@ -1,7 +1,7 @@
 #root {
-  max-width: 1280px;
+  /* max-width: 1280px; */
   margin: 0 auto;
-  padding: 2rem;
+  /* padding: 2rem; */
   text-align: center;
 }
 
@@ -16,22 +16,9 @@ body {
   font-family: "Munchkin", sans-serif;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-
 .card:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-  overflow: visible;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  transform: rotateX(10deg) translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.55);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -41,17 +28,18 @@ body {
 }
 
 .card {
-  padding: 2em;
+  padding: 1em;
+  background-color: #e7c08d;
+  color: black;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transform-origin: bottom center; /* Makes it tilt upward */
 }
 
 .read-the-docs {
   color: #888;
 }
 
-@media (prefers-color-scheme: light) {
-  .lightmode {
-    color: black;
-    /* color: #213547; */
-    background-color: #ffffff;
-  }
+.musicbtn {
+  background-image: url("/img/sound_off.png");
 }

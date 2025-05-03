@@ -24,106 +24,121 @@ export default function App() {
 
   return (
     <div className="lightmode">
-      <button
-        onClick={() => setIsModalOpen(true)}
-        style={{
-          border: "1px solid",
-          padding: "10px 20px",
-          borderRadius: "5px",
-          cursor: "pointer",
-        }}
-      >
-        Add Player
-      </button>
-
-      {isModalOpen && (
-        <div
+      <div className="header ">
+        <button
+          onClick={() => setIsModalOpen(true)}
           style={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            backgroundColor: "rgba(0,0,0,0.5)",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            zIndex: 1000,
+            border: "4px solid",
+            borderColor: "black",
+            backgroundColor: "#e7c08d",
+            padding: "10px 20px",
+            borderRadius: "5px",
+            color: "black",
+
+            fontSize: "1.5rem",
           }}
         >
+          Add Player
+        </button>
+        <div className="absolute right-1 top-5">
+          <BackgroundMusic />
+        </div>
+      </div>
+
+      <div className="table">
+        {isModalOpen && (
           <div
             style={{
-              backgroundColor: "gray",
-              padding: "20px",
-              borderRadius: "10px",
-              width: "300px",
+              position: "fixed",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              backgroundColor: "rgba(0,0,0,0.5)",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              zIndex: 1000,
             }}
           >
-            <h2 style={{ marginTop: 0 }}>Add New Player</h2>
-            <input
-              autoFocus
-              type="text"
-              value={newPlayerName}
-              onChange={(e) => setNewPlayerName(e.target.value)}
-              onKeyDown={(e) => e.key === "Enter" && addPlayer()}
-              placeholder="Enter player name"
+            <div
               style={{
-                width: "100%",
-                padding: "10px",
-                marginBottom: "10px",
-                boxSizing: "border-box",
+                backgroundColor: "#e7c08d",
+                border: "5px solid",
+                borderColor: "black",
+                color: "black",
+                padding: "20px",
+                borderRadius: "10px",
+                width: "300px",
               }}
-            />
-            <div style={{ display: "flex", justifyContent: "space-between" }}>
-              <button
-                onClick={() => setIsModalOpen(false)}
+            >
+              <h2 style={{ marginTop: 0, fontSize: "1.5rem" }}>
+                Add New Player
+              </h2>
+              <input
+                autoFocus
+                type="text"
+                value={newPlayerName}
+                onChange={(e) => setNewPlayerName(e.target.value)}
+                onKeyDown={(e) => e.key === "Enter" && addPlayer()}
+                placeholder="Enter player name"
                 style={{
-                  backgroundColor: "#f44336",
                   color: "black",
-                  border: "none",
-                  padding: "10px 20px",
+                  borderColor: "black",
+                  border: "2px solid",
                   borderRadius: "5px",
-                  cursor: "pointer",
+                  width: "100%",
+                  padding: "10px",
+                  marginBottom: "10px",
+                  boxSizing: "border-box",
                 }}
-              >
-                Cancel
-              </button>
-              <button
-                onClick={addPlayer}
-                style={{
-                  backgroundColor: "#4CAF50",
-                  color: "black",
-                  border: "none",
-                  padding: "10px 20px",
-                  borderRadius: "5px",
-                  cursor: "pointer",
-                }}
-              >
-                Confirm
-              </button>
+              />
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <button
+                  onClick={() => setIsModalOpen(false)}
+                  style={{
+                    backgroundColor: "#f44336",
+                    color: "black",
+                    border: "none",
+                    padding: "10px 20px",
+                    borderRadius: "5px",
+                  }}
+                >
+                  Cancel
+                </button>
+                <button
+                  onClick={addPlayer}
+                  style={{
+                    backgroundColor: "#4CAF50",
+                    color: "black",
+                    border: "none",
+                    padding: "10px 20px",
+                    borderRadius: "5px",
+                  }}
+                >
+                  Confirm
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
 
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(3, 1fr)",
-          gap: "10px",
-          marginTop: "20px",
-        }}
-      >
-        {players.map((player, index) => (
-          <PlayerCard
-            key={index}
-            onClick={() => deletePlayer(index)}
-            playerName={player}
-          ></PlayerCard>
-        ))}
-      </div>
-      <div className="absolute right-20 top-20">
-        <BackgroundMusic />
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(4, 1fr)",
+            gap: "10px",
+            marginTop: "20px",
+          }}
+        >
+          {players.map((player, index) => (
+            <PlayerCard
+              key={index}
+              onClick={() => deletePlayer(index)}
+              playerName={player}
+            ></PlayerCard>
+          ))}
+        </div>
       </div>
     </div>
   );
