@@ -11,7 +11,6 @@ const BackgroundMusic = () => {
   return (
     <div>
       <Howler
-        ref={(ref) => (playerRef.current = ref)}
         src={streamUrl}
         playing={playing}
         loop
